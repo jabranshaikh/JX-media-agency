@@ -1,24 +1,15 @@
-// Fade-in on scroll
-const faders = document.querySelectorAll('.fade-in');
-const appearOptions = { threshold: 0.2 };
 
-const appearOnScroll = new IntersectionObserver(function(entries, observer){
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.classList.add('show');
-            observer.unobserve(entry.target);
-        }
-    });
-}, appearOptions);
+let current = 0;
+const testimonials = document.querySelectorAll(".testimonial");
 
-faders.forEach(fade => appearOnScroll.observe(fade));
+function showTestimonial(index) {
+  testimonials.forEach((t, i) => {
+    t.classList.remove("active");
+    if (i === index) t.classList.add("active");
+  });
+}
 
-// Smooth scroll for internal links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+setInterval(() => {
+  current = (current + 1) % testimonials.length;
+  showTestimonial(current);
+}, 4000);

@@ -1,90 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JX media agency</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SB9PJL57P9"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JX Media Agency</title>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-60Q41CGZNB"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-SB9PJL57P9');
+  gtag('config', 'G-60Q41CGZNB');
 </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Global Styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #000;
+      color: #fff;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    header {
+      background: #000;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 { color: gold; font-size: 28px; }
+    nav a {
+      margin: 0 15px;
+      font-weight: 500;
+      color: white;
+      transition: 0.3s;
+    }
+    nav a:hover { color: gold; }
+
+    /* Hero */
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    .hero p { font-size: 18px; margin-bottom: 30px; color: #ccc; }
+    .btn {
+      padding: 12px 30px;
+      background: gold;
+      color: #000;
+      font-weight: 600;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+    .btn:hover { background: #fff; }
+
+    /* Services */
+    .services {
+      padding: 80px 50px;
+      text-align: center;
+    }
+    .services h2 { font-size: 36px; margin-bottom: 50px; color: gold; }
+    .service-boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+    .service {
+      background: #111;
+      padding: 30px;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+    .service:hover { transform: translateY(-5px); }
+    .service i {
+      font-size: 40px;
+      color: gold;
+      margin-bottom: 15px;
+    }
+    .service h3 { margin-bottom: 10px; }
+
+    /* Portfolio */
+    .portfolio {
+      padding: 80px 50px;
+      text-align: center;
+    }
+    .portfolio h2 { font-size: 36px; margin-bottom: 20px; color: gold; }
+    .portfolio a.btn { margin-top: 20px; display: inline-block; }
+
+    /* Testimonials */
+    .testimonials {
+      padding: 80px 50px;
+      background: #111;
+      text-align: center;
+    }
+    .testimonials h2 { color: gold; margin-bottom: 40px; }
+    .testimonial {
+      max-width: 600px;
+      margin: 20px auto;
+      font-style: italic;
+      color: #ccc;
+    }
+
+    /* Contact */
+    .contact {
+      padding: 80px 50px;
+      text-align: center;
+    }
+    .contact h2 { color: gold; margin-bottom: 30px; }
+    .contact form {
+      max-width: 500px;
+      margin: auto;
+    }
+    .contact input, .contact textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 6px;
+      background: #222;
+      color: white;
+    }
+    .contact button {
+      padding: 12px 25px;
+      border: none;
+      background: gold;
+      color: #000;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .contact button:hover { background: #fff; }
+
+    /* Footer */
+    footer {
+      background: #000;
+      padding: 20px;
+      text-align: center;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      color: white;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+    .social-icons a:hover { color: gold; }
+  </style>
 </head>
 <body>
 
-<header>
-    <div class="logo">JX <span>media agency</span></div>
+  <!-- Header -->
+  <header>
+    <h1>JX Media Agency</h1>
     <nav>
-        <a href="#work">Work With Us</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#contact">Contact</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
     </nav>
-</header>
+  </header>
 
-<!-- Hero -->
-<section class="hero">
-    <h1>Welcome to <span class="shimmer">JX media agency</span></h1>
-    <p>Premium social media marketing tailored to grow your brand and get real results.</p>
-    <a href="#contact" class="btn">Work With Us</a>
-</section>
-
-<!-- Work With Us -->
-<section id="work" class="fade-in">
-    <h2 class="gold-underline">Why Work With Us</h2>
-    <div class="features">
-        <div class="feature-card">
-            <h3>Proven Results</h3>
-            <p>We focus on ROI-driven strategies to ensure every campaign delivers measurable success.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Personal Attention</h3>
-            <p>As a founder-led agency, you work directly with me for a personalized approach.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Creative Campaigns</h3>
-            <p>We craft eye-catching and innovative campaigns that make your brand stand out.</p>
-        </div>
+  <!-- Hero -->
+  <section class="hero">
+    <div>
+      <h2>We Help Brands Grow with Digital Power</h2>
+      <p>Meta Ads • Ad Design • Copywriting • Landing Pages • SMM</p>
+      <a href="#contact" class="btn">Work With Us</a>
     </div>
-</section>
+  </section>
 
+  <!-- Services -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-boxes">
+      <div class="service"><i class="fa-brands fa-facebook"></i><h3>Meta Ads</h3><p>High-converting ad campaigns that bring real results.</p></div>
+      <div class="service"><i class="fa-solid fa-pen-nib"></i><h3>Copywriting</h3><p>Words that sell and connect with your target audience.</p></div>
+      <div class="service"><i class="fa-solid fa-palette"></i><h3>Ad Design</h3><p>Visually stunning ads to capture attention instantly.</p></div>
+      <div class="service"><i class="fa-solid fa-laptop-code"></i><h3>Landing Pages</h3><p>Optimized landing pages for maximum conversions.</p></div>
+      <div class="service"><i class="fa-solid fa-share-nodes"></i><h3>Social Media</h3><p>Organic & paid growth strategies for all platforms.</p></div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="portfolio">
+    <h2>Our Portfolio</h2>
+    <p>Check out some of our best work</p>
+    <a href="https://drive.google.com/file/d/1SmfXuevMwsdEvAqtH4-EfteWGWvaqv3J/view?usp=drive_link" target="_blank" class="btn">View Portfolio</a>
+  </section>
 <!-- Testimonials -->
-<section id="testimonials" class="fade-in">
-    <h2 class="gold-underline">What Our Clients Say</h2>
-    <div class="testimonials">
-        <div class="testimonial-card">
-            <p>"JX media agency helped us triple our engagement in just 2 months. Absolutely worth it!"</p>
-            <span>- Ali Khan, Brand Owner</span>
-        </div>
-        <div class="testimonial-card">
-            <p>"The campaigns were not only creative but also brought in real sales. Highly recommend!"</p>
-            <span>- Abdullah Ahmed, Entrepreneur</span>
-        </div>
+<section id="testimonials" class="testimonials">
+    <h2>What Clients Say</h2>
+    <div class="testimonial-slider">
+      <div class="testimonial active">
+        <p>“JX Media helped us generate 3x more leads in just one month!”</p>
+        <h4>- Sarah, CEO of Green Energy</h4>
+      </div>
+      <div class="testimonial">
+        <p>“The ad creatives were stunning and delivered real results.”</p>
+        <h4>- David, Founder of Luxe Apparel</h4>
+      </div>
+      <div class="testimonial">
+        <p>“Professional, reliable, and outstanding ROI. Highly recommended.”</p>
+        <h4>- Abdullah, Real Estate Consultant</h4>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- Contact -->
-<section id="contact" class="contact fade-in">
-    <h2 class="gold-underline">Get in Touch</h2>
-   <form action="https://formspree.io/f/xyzpvwey" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-    <button type="submit">Send Message</button>
-</form>
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-    <a href="https://wa.me/923138505589" target="_blank" class="btn whatsapp-btn">Message on WhatsApp</a>
-</section>
 
-<footer>
-    © 2025 JX media agency. All rights reserved.
-</footer>
 
-<script src="script.js"></script>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 JX Media Agency. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/1BEhCJEmTX/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/maybe_jibran?igsh=dWw5bjJvNGpwOWlr" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/muhammad-jabran-afzal-65847337b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://x.com/jabran_shaikh?s=08" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://wa.me/923138505589" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+    </div>
+  </footer>
+
 </body>
 </html>
